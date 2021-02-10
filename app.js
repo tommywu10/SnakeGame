@@ -1,6 +1,8 @@
 const grid = document.querySelector('.grid')
 const startBtn = document.getElementById('start')
 const scoreNum = document.getElementById('score')
+const gameOver = document.getElementById('gameOver')
+
 let squaresArray = []
 let currentSnake = [2, 1, 0]
 let direction = 1
@@ -45,7 +47,7 @@ function move(){
         (currentSnake[0] - width < 0 && direction === -10) ||
         squaresArray[currentSnake[0] + direction].classList.contains('snake')
     )
-    return clearInterval(timerId)
+    return clearInterval(timerId), gameOver.innerHTML = "Game Over"
     
 
     //makes snake look like it's moving
@@ -88,6 +90,7 @@ function startGame(){
     scoreNum.innerHTML = score
     currentSnake.forEach(index => squaresArray[index].classList.add("snake"))
     generateApples()
+    gameOver.innerHTML = ''
 }
 
 //-------------------------------------------------------------------------------------

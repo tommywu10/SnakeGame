@@ -5,9 +5,10 @@ body {
 .grid {
     width: 200px;
     height: 200px;
-    border: solid 1px black;
+    border: solid 4px black;
     display: flex;
     flex-wrap: wrap;
+    background-color: white;
 }
 
 .square {
@@ -21,4 +22,21 @@ body {
 
 .apple {
     background-color: red;
+    border-radius: 20px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pangolin', cursive;
+}
+
+#start {
+    border-radius: 15px;
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    border: solid 2px black;
 }
