@@ -39,4 +39,5 @@ body {
     outline: none;
     cursor: pointer;
     border: solid 2px black;
+    font-family: 'Pangolin', cursive;
 }
