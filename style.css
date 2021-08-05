@@ -41,3 +41,41 @@ body {
     border: solid 2px black;
     font-family: 'Pangolin', cursive;
 }
+
+.d-pad{
+    width: 140px;
+    height: 140px;
+    position: relative;
+}
+
+#up {
+    position: absolute;
+    left: 53px;
+    width: 35px;
+}
+
+#right {
+    position: absolute;
+    right: 0;
+    top: 49px;
+    width: 35px;
+}
+
+#down {
+    position: absolute;
+    left: 53px;
+    bottom: 0;
+    width: 35px;
+}
+
+#left {
+    position: absolute;
+    top: 49px;
+    width: 35px;
+}
+
+#gameOver {
+    color: red;
+    text-transform: uppercase;
+    font-size: 80px;
+}

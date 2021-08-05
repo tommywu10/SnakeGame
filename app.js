@@ -2,6 +2,10 @@ const grid = document.querySelector('.grid')
 const startBtn = document.getElementById('start')
 const scoreNum = document.getElementById('score')
 const gameOver = document.getElementById('gameOver')
+const upBtn = document.getElementById('up');
+const rightBtn = document.getElementById('right');
+const downBtn = document.getElementById('down');
+const leftBtn = document.getElementById('left');
 
 let squaresArray = []
 let currentSnake = [2, 1, 0]
@@ -93,7 +97,7 @@ function startGame(){
     gameOver.innerHTML = ''
 }
 
-//-------------------------------------------------------------------------------------
+//--------------------------------Arrow key directions-----------------------------------------------------
 function control(e){
     if(e.keyCode === 39){
         console.log('right')
@@ -111,4 +115,27 @@ function control(e){
 }
 
 document.addEventListener('keydown', control)
+
+//-----------------------------------D-Pad directions--------------------------------------------------
+
+function right(e){
+    direction = 1
+}
+
+function down(e){
+    direction = +width
+}
+function left(e){
+    direction = -1
+}
+
+function up(e){
+    direction = -width
+}
+
+rightBtn.addEventListener('click', right)
+downBtn.addEventListener('click', down)
+upBtn.addEventListener('click', up)
+leftBtn.addEventListener('click', left)
+
 startBtn.addEventListener('click', startGame)
